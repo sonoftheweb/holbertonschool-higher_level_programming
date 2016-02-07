@@ -20,4 +20,4 @@ price = price + ((tax / 100) * price)
 price = price + ((tip / 100) * price)
 
 #print the result using
-print "The price you need to pay is: $%s." % (price)
+print "The price you need to pay is: $%.6f." % (price)
