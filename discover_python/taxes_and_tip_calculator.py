@@ -5,22 +5,19 @@ using user inputs. Testing done using python 3 """
 print "Welcome to the taxes and tip calculator!"
 
 #request for the users input in price and store the input in a variable price
-price = raw_input("What is the price before tax? ")
+price = float(raw_input("What is the price before tax? "))
 
 #request for the users input in tax and store the input in a variable tax
-tax = raw_input("What are the taxes? (in %) ")
+tax = float(raw_input("What are the taxes? (in %) "))
 
 #request for the users input in tip and store the input in a variable tip
-tip = raw_input("What do you want to tip? (in %) ")
+tip = float(raw_input("What do you want to tip? (in %) "))
 
 #get the price behind the tax
-tax = (float(tax)/100) * float(price)
+price = price + ((tax / 100) * price)
 
 #get the price behind tip
-tip = (float(tip)/100) * float(price)
-
-#get the final price, re-saving the value in the variable price
-price = float(price) + tax + tip
+price = price + ((tip / 100) * price)
 
 #print the result using
 print "The price you need to pay is: $%s." % (price)
